@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121820;
+    /* preto bem escuro */
+    color: #e0e6f0;
+    /* branco suave */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+
+h1,
+h2,
+h3 {
+    margin-bottom: 1rem;
+    color: #e0e6f0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px solid #30445c;
+    /* sutil underline na cor da paleta */
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #558fc7;
+}
+
+p,
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    /* cinza claro suave */
+}
+
+ul {
+    padding-left: 1.2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* fundo dos blocos mais escuros, com detalhes em azul suave */
+.bg-white {
+    background-color: #1b2838;
+    /* azul escuro quase preto */
+    box-shadow: 0 4px 12px rgba(21, 42, 69, 0.6);
+    /* sombra azulada suave */
+    border-radius: 0.75rem;
+    color: #d0d9f3;
+}
+
+.bg-gray-100 {
+    background-color: #182b43;
+    /* paleta - azul escuro */
+    border-radius: 0.75rem;
+    color: #b0bed8;
+}
+
+.bg-blue-50 {
+    background-color: #30445c;
+    /* paleta - azul médio */
+    border-radius: 0.75rem;
+    color: #e3ebf8;
+}
+
+.bg-blue-600 {
+    background-color: #558fc7;
+    /* paleta - azul claro */
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(85, 143, 199, 0.6);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #558fc7;
+    color: white;
+    border: none;
+    box-shadow: 0 3px 10px rgba(85, 143, 199, 0.6);
+}
+
+.btn-primary:hover {
+    background-color: #5f5cb0;
+    color: white;
+    box-shadow: 0 4px 14px rgba(95, 92, 176, 0.7);
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #5f5cb0;
+    border: 2px solid #5f5cb0;
+    color: white;
+}
+
+.shadow {
+    box-shadow: 0 2px 8px rgba(21, 42, 69, 0.8);
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cols-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.card-flip {
+    position: relative;
+    height: 16rem;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(21, 42, 69, 0.6);
+}
+
+.card-front {
+    background-color: #182b43;
+    /* paleta mais escura */
+    flex-direction: column;
+    border: 1px solid #30445c;
+    color: #cbd5e1;
+}
+
+.card-front h3 {
+    color: #558fc7;
+    margin-top: 0.5rem;
+}
+
+.card-back {
+    background-color: #5f5cb0;
+    color: white;
+    transform: rotateY(180deg);
+    padding: 2rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.team-photo {
+    height: 10rem;
+    background-color: #30445c;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 8px rgba(85, 143, 199, 0.4);
+}
+
+footer {
+    background-color: #121820;
+    color: #a0afc9;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 1px solid #30445c;
+    font-weight: 500;
+}
+
+.list-disc {
+    list-style-type: disc;
+    color: #c0c9dd;
+}
+
+a {
+    color: #558fc7;
+}
+
+a:hover {
+    color: #5f5cb0;
+}
