@@ -4,69 +4,45 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TrustV | Tecnologia com Confiança</title>
+    <title>TrustV | Tecnologia e Confiança</title>
     <link rel="stylesheet" href="../css/pagInicial.css" />
-    <script src="../JS/geral.js"></script>        
+    <script src="../JS/geral.js" defer></script>       
 </head>
 
 <body>
 
-    <!-- Hero -->
-    <section class="bg-white text-center shadow">
-        <h1>Transformamos confiança em tecnologia</h1>
-        <p class="mb-6">Soluções digitais personalizadas para empresas que querem crescer com segurança e inovação.</p>
-        <div style="margin-top: 1rem;">
-            <a href="#solucoes" class="btn btn-primary">Conheça nossas soluções</a>
-            <a href="#contato" class="btn btn-outline" style="margin-left: 1rem;">Fale com a gente</a>
-        </div>
-    </section>
-
-    <!-- Quem Somos -->
-    <section id="quem-somos">
-        <h2>Quem Somos</h2>
-        <p class="max-w-3xl">A <strong>TrustV</strong> nasceu em 2025 com a missão de criar soluções tecnológicas confiáveis, seguras e humanas. Mesmo sendo uma empresa jovem, temos propósito, responsabilidade e foco total no cliente. Nosso nome carrega valores como fé, esperança e credibilidade — porque é isso que entregamos junto com cada software.</p>
-    </section>
-
-    <!-- Missão, Visão, Valores -->
-    <section class="bg-gray-100">
-        <div class="grid grid-cols-3">
-            <div>
-                <h3>Missão</h3>
-                <p>Criar soluções digitais seguras, confiáveis e personalizadas, conectando tecnologia e confiança para impulsionar o crescimento de empresas.</p>
-            </div>
-            <div>
-                <h3>Visão</h3>
-                <p>Estar presente em todas as cidades do Brasil até 2040, sendo referência nacional em soluções tecnológicas sob medida.</p>
-            </div>
-            <div>
-                <h3>Valores</h3>
-                <ul class="list-disc">
-                    <li>Compromisso com o cliente</li>
-                    <li>Ética e transparência</li>
-                    <li>Inovação com propósito</li>
-                    <li>Parceria verdadeira</li>
-                    <li>Responsabilidade</li>
-                    <li>Empatia</li>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo"><img src="../assets/img/logo.png" alt="logo"></a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Quem somos</a></li>
+                    <li><a href="#segmentos">Segmentos</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
                 </ul>
             </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container-hero">
+            <h1 class="titulo-hero"><span id="typing"></span></h1>
         </div>
     </section>
 
     <!-- Segmentos -->
     <section id="segmentos">
-        <h2>Segmentos que Atendemos</h2>
-        <p>A tecnologia certa pode transformar o seu negócio — e a TrustV está aqui para fazer isso com você.</p>
-
-        <div class="grid grid-cols-3 bg-gray-100" style="padding: 2rem; border-radius: 1rem;">
+        <h2 class="titulo-secao">Segmentos em que atuamos</h2>
+        <div class="cardRow" style="padding: 2rem; border-radius: 1rem;">
             <!-- Card 1 -->
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
                         <div style="font-size: 2rem;">🛍️</div>
-                        <h3>Comércio e Varejo</h3>
+                        <h3 class="subtitulo">Comércio e Varejo</h3>
                     </div>
                     <div class="card-back">
-                        <p>Menos bagunça, mais vendas com sistemas que otimizam seu fluxo de caixa e controle de estoque.</p>
+                        <p class="texto">Menos bagunça, mais vendas com sistemas que otimizam seu fluxo de caixa e controle de estoque.</p>
                     </div>
                 </div>
             </div>
@@ -76,10 +52,10 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div style="font-size: 2rem;">🏥</div>
-                        <h3>Saúde</h3>
+                        <h3 class="subtitulo">Saúde</h3>
                     </div>
                     <div class="card-back">
-                        <p>Você cuida de pessoas, a gente cuida da tecnologia. Sistemas para clínicas, consultórios e hospitais.</p>
+                        <p class="texto">Você cuida de pessoas, a gente cuida da tecnologia. Sistemas para clínicas, consultórios e hospitais.</p>
                     </div>
                 </div>
             </div>
@@ -89,70 +65,103 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <div style="font-size: 2rem;">🎓</div>
-                        <h3>Educação</h3>
+                        <h3 class="subtitulo">Educação</h3>
                     </div>
                     <div class="card-back">
-                        <p>Mais tempo para ensinar com plataformas intuitivas, agendas digitais e relatórios automáticos.</p>
+                        <p class="texto">Mais tempo para ensinar com plataformas intuitivas, agendas digitais e relatórios automáticos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card-flip">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div style="font-size: 2rem;">🚀</div>
+                        <h3 class="subtitulo">Tecnologia e Inovação</h3>
+                    </div>
+                    <div class="card-back">
+                        <p class="texto">Desbloqueie o seu potencial com soluções inovadoras e tecnologias de ponta.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="card-flip">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div style="font-size: 2rem;">🚧</div>
+                        <h3 class="subtitulo">Construção e Engenharia</h3>
+                    </div>
+                    <div class="card-back">
+                        <p class="texto">Gerencie seus projetos de forma eficiente com ferramentas para planejamento, execução e monitoramento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="card-flip">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div style="font-size: 2rem;">🚗</div>
+                        <h3 class="subtitulo">Transporte e Logística</h3>
+                    </div>
+                    <div class="card-back">
+                        <p class="texto">Optimize seus processos de entrega e gerenciamento de frota com tecnologias avançadas.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Soluções -->
-    <section id="solucoes" class="bg-gray-100">
-        <h2>Soluções</h2>
-        <p>Desenvolvemos <strong>softwares sob medida</strong> com foco em eficiência, controle e segurança.</p>
-        <ul class="list-disc grid grid-cols-2">
-            <li>Sistemas web</li>
-            <li>Aplicativos mobile</li>
-            <li>Automação de processos</li>
-            <li>Dashboards personalizados</li>
-            <li>Integrações com APIs</li>
-            <li>Ferramentas de gestão inteligente</li>
-        </ul>
-    </section>
+    <hr>
 
     <!-- Equipe -->
     <section id="equipe">
-        <h2>Nosso Time</h2>
+        <h2 class="titulo-secao">Nossa Equipe</h2>
         <div class="grid grid-cols-5 text-center">
             <div>
-                <div class="team-photo">[Foto Pedro]</div>
-                <p><strong>Pedro Zucchi</strong><br><span style="font-size: 0.875rem;">Gerente de Projetos & Desenvolvedor</span></p>
+                <div class="team-photo"><img src="../assets/img/lindo.jpeg" alt=""></div>
+                <p class="texto-equipe"><strong>Pedro Zucchi</strong><br><span style="font-size: 0.875rem;">Gerente de Projetos & Desenvolvedor</span></p>
             </div>
             <div>
-                <div class="team-photo">[Foto João]</div>
-                <p><strong>João Guilherme Pasinatto</strong><br><span style="font-size: 0.875rem;">Desenvolvedor</span></p>
+                <div class="team-photo"><img src="../assets/img/guapo.jpeg" alt=""></div>
+                <p class="texto-equipe"><strong>João Guilherme Pasinatto</strong><br><span style="font-size: 0.875rem;">Desenvolvedor</span></p>
             </div>
             <div>
-                <div class="team-photo">[Foto Brenda]</div>
-                <p><strong>Brenda Goronski</strong><br><span style="font-size: 0.875rem;">Produtora de Conteúdo</span></p>
+                <div class="team-photo"><img src="../assets/img/bremda.jpeg" alt=""></div>
+                <p class="texto-equipe"><strong>Brenda Goronski</strong><br><span style="font-size: 0.875rem;">Produtora de Conteúdo</span></p>
             </div>
             <div>
-                <div class="team-photo">[Foto Nicolle]</div>
-                <p><strong>Maria Nicolle Ferreira</strong><br><span style="font-size: 0.875rem;">Produtora de Conteúdo</span></p>
+                <div class="team-photo"><img src="../assets/img/nigole.jpeg" alt=""></div>
+                <p class="texto-equipe"><strong>Maria Ferreira Silva</strong><br><span style="font-size: 0.875rem;">Produtora de Conteúdo</span></p>
             </div>
             <div>
-                <div class="team-photo">[Foto João Basseggio]</div>
-                <p><strong>João Basseggio</strong><br><span style="font-size: 0.875rem;">Designer</span></p>
+                <div class="team-photo"><img src="../assets/img/basseggio.jpeg" alt=""></div>
+                <p class="texto-equipe"><strong>João Basseggio</strong><br><span style="font-size: 0.875rem;">Designer</span></p>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="bg-blue-50 text-center">
-        <h2>Fale com a gente</h2>
-        <p>Em breve, você poderá entrar em contato com facilidade. Estamos preparando nossos canais!</p>
-        <div class="team-photo">[ Formulário de contato futuramente ]</div>
-    </section>
-
     <!-- Rodapé -->
     <footer>
-        <p class="font-semibold">TrustV • Tecnologia com Confiança</p>
-        <p class="text-sm">© 2025 TrustV. Todos os direitos reservados.</p>
+        <p>TrustV • Tecnologia com Confiança</p>
+        <p>© 2025 TrustV. Todos os direitos reservados.</p>
     </footer>
 
+    <button id="btnTop" style="
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 50%;
+    background-color: #30445c;
+    color: white;
+    border: none;
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+    ">↑</button>
 </body>
-
 </html>
