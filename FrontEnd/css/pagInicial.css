@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    background-color: #e3e3e3;
     color: #30445c;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -25,11 +25,19 @@ hr {
     margin: auto;
 }
 
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 #hero {
-    background-image: url('../assets/img/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(to left, #182b43, #558fc7,	#8b6fc1, #cdcfcf, #8b6fc1, #558fc7, #30445c, #182b43);
+    background-size: 300% 100%;
+    animation: gradientBackground 6s infinite alternate-reverse;
     min-height: 50vh;
     display: flex;
     align-items: center;
@@ -50,6 +58,7 @@ hr {
 .container-hero {
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .titulo-hero {
@@ -177,10 +186,16 @@ hr {
 }
 
 .card-front {
-    background-color: #182b43;
+    background: linear-gradient( #122439, #30445c, #354b65, #30445c, #122439);
+    background-size: 300% 100%;
+    animation: gradientBackground 6s infinite alternate-reverse;
     flex-direction: column;
     border: 1px solid #30445c;
     color: #cbd5e1;
+}
+
+.card-front::before {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card-front h3 {
@@ -224,14 +239,29 @@ hr {
 }
 
 footer {
-    background-color: #121820;
+    background: linear-gradient(to left, #182b43, #558fc7, #8b6fc1, #cdcfcf, #8b6fc1, #558fc7, #30445c, #182b43);
+    background-size: 300% 100%;
+    animation: gradientBackground 6s infinite alternate-reverse;
     text-align: center;
     padding: 2rem 1rem;
     font-weight: 500;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
 footer p {
     color: #E4F0F0;
+    position: relative;
+    z-index: 1;
 }
 
 header {
@@ -310,4 +340,3 @@ header {
 .texto-equipe span {
     color: #666;
 }
-
