@@ -1,12 +1,12 @@
-# 🚀 TrustV - Confiança e Velocidade x5
+# TrustV - Confiança e Velocidade x5
 
 ![TrustV Logo](FrontEnd/assets/img/logo.png)
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósito de descomplicar o digital. Nosso site institucional foi desenvolvido para apresentar nossa empresa, valores e serviços de forma moderna e profissional.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 ### Frontend
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
@@ -23,7 +23,7 @@ A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósi
 <img src="https://img.shields.io/badge/Event_Listeners-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Event Listeners">
 <img src="https://img.shields.io/badge/Intersection_Observer-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Intersection Observer">
 
-## 🎨 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 FrontEnd/
@@ -37,7 +37,7 @@ FrontEnd/
     └── pagInicial.html
 ```
 
-## 🚀 Como Executar
+## Como Executar
 
 1. Clone o repositório:
 ```bash
@@ -51,14 +51,14 @@ cd TrustV
 
 3. Abra o arquivo `FrontEnd/Html/pagInicial.html` em seu navegador preferido.
 
-## 📱 Responsividade
+## Responsividade
 
 O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 - Desktop
 - Tablet
 - Mobile
 
-## 👥 Equipe de Desenvolvimento
+## Equipe de Desenvolvimento
 
 - Pedro Zucchi - Gerente de Projetos & Desenvolvedor
 - João Guilherme - Desenvolvedor
@@ -66,11 +66,11 @@ O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 - Maria Nicolle - Content Creator
 - João Basseggio - Designer
 
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença [MIT](LICENSE).
 
-## 📞 Contato
+## Contato
 
 - Email: trustvcontact@gmail.com
 - Telefone: (47) 99999-9999
