@@ -1,11 +1,25 @@
 // Botão voltar ao topo
-const btn = document.getElementById('btnTop');
+const btnTop = document.getElementById('btnTop');
+
 window.addEventListener('scroll', () => {
-    btn.style.display = window.scrollY > 200 ? 'block' : 'none';
+    if (window.scrollY > 300) {
+        btnTop.style.display = 'flex';
+        btnTop.classList.add('visible');
+    } else {
+        btnTop.classList.remove('visible');
+        setTimeout(() => {
+            if (window.scrollY <= 300) {
+                btnTop.style.display = 'none';
+            }
+        }, 300);
+    }
 });
 
-btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+btnTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 });
 
 // Scroll suave nos links
@@ -51,3 +65,43 @@ function type() {
 }
 
 type();
+
+// Função para animar os contadores
+function animateCounters() {
+    const counters = document.querySelectorAll('.contador');
+    
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-valor'));
+        const duration = 2000; // 2 segundos
+        const step = target / (duration / 16); // 60fps
+        let current = 0;
+
+        const updateCounter = () => {
+            current += step;
+            if (current < target) {
+                counter.textContent = Math.floor(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target;
+            }
+        };
+
+        updateCounter();
+    });
+}
+
+// Observador de Intersecção para iniciar a animação quando o elemento estiver visível
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            animateCounters();
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+// Observar o container de estatísticas
+const estatisticasContainer = document.querySelector('.estatisticas-container');
+if (estatisticasContainer) {
+    observer.observe(estatisticasContainer);
+}

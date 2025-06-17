@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="../JS/geral.js" defer></script>      
 </head>
 
@@ -19,7 +20,7 @@
             <div class="container">
                 <a href="#" class="logo"><img src="../assets/img/logo.png" alt="logo"></a>
                 <ul class="nav-links">
-                    <li><a href="#hero">Sobre nós</a></li>
+                    <li><a href="#sobre">Sobre nós</a></li>
                     <li><a href="#segmentos">Segmentos</a></li>
                     <li><a href="#equipe">Equipe</a></li>
                 </ul>
@@ -33,6 +34,56 @@
         </div>
     </section>
 
+    <section id="sobre">
+        <div class="container-sobre">
+            <h2 class="titulo-secao">Sobre nós</h2>
+            <p class="texto-sobre">A TrustV é uma empresa de tecnologia dedicada a fornecer soluções inovadoras e confiáveis para o mercado. Nossa missão é transformar a forma como as empresas operam, oferecendo sistemas que otimizam processos, aumentam a eficiência e garantem segurança.</p>
+            <p class="texto-sobre">Com uma equipe apaixonada e experiente, estamos comprometidos em entregar produtos de alta qualidade que atendam às necessidades dos nossos clientes. Acreditamos que a tecnologia deve ser acessível e fácil de usar, permitindo que nossos parceiros se concentrem no que realmente importa: o crescimento dos seus negócios.</p>
+
+            <!-- Estatísticas -->
+            <div class="estatisticas-container">
+                <div class="estatistica-item">
+                    <span class="contador" data-valor="7">0</span>
+                    <p>Projetos Entregues</p>
+                </div>
+                <div class="estatistica-item">
+                    <span class="contador" data-valor="2">0</span>
+                    <p>Clientes Satisfeitos</p>
+                </div>
+                <div class="estatistica-item">
+                    <span class="contador" data-valor="1">0</span>
+                    <p>Anos de Experiência</p>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Valores da Empresa -->
+            <div class="valores-container">
+                <h3>Nossos Valores</h3>
+                <div class="valores-grid">
+                    <div class="valor-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Inovação</h4>
+                        <p>Sempre à frente com soluções tecnológicas de ponta</p>
+                    </div>
+                    <div class="valor-card">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Confiança</h4>
+                        <p>Construímos relacionamentos duradouros</p>
+                    </div>
+                    <div class="valor-card">
+                        <i class="fas fa-users"></i>
+                        <h4>Colaboração</h4>
+                        <p>Trabalho em equipe para resultados excepcionais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
     <!-- Segmentos -->
     <section id="segmentos">
         <h2 class="titulo-secao">Segmentos em que atuamos</h2>
@@ -41,7 +92,7 @@
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div style="font-size: 2rem;">🛍️</div>
+                        <div style="font-size: 5rem;">🛍️</div>
                         <h3 class="subtitulo">Comércio e Varejo</h3>
                     </div>
                     <div class="card-back">
@@ -54,7 +105,7 @@
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div style="font-size: 2rem;">🏥</div>
+                        <div style="font-size: 5rem;">🏥</div>
                         <h3 class="subtitulo">Saúde</h3>
                     </div>
                     <div class="card-back">
@@ -67,7 +118,7 @@
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div style="font-size: 2rem;">🎓</div>
+                        <div style="font-size: 5rem;">🎓</div>
                         <h3 class="subtitulo">Educação</h3>
                     </div>
                     <div class="card-back">
@@ -80,7 +131,7 @@
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div style="font-size: 2rem;">🚀</div>
+                        <div style="font-size: 5rem;">🚀</div>
                         <h3 class="subtitulo">Tecnologia e Inovação</h3>
                     </div>
                     <div class="card-back">
@@ -93,7 +144,7 @@
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div style="font-size: 2rem;">🚧</div>
+                        <div style="font-size: 5rem;">🚧</div>
                         <h3 class="subtitulo">Construção e Engenharia</h3>
                     </div>
                     <div class="card-back">
@@ -106,7 +157,7 @@
             <div class="card-flip">
                 <div class="card-inner">
                     <div class="card-front">
-                        <div style="font-size: 2rem;">🚗</div>
+                        <div style="font-size: 5rem;">🚗</div>
                         <h3 class="subtitulo">Transporte e Logística</h3>
                     </div>
                     <div class="card-back">
@@ -129,7 +180,7 @@
             </div>
             <div>
                 <div class="team-photo"><img src="../assets/img/guapo.jpeg" alt=""></div>
-                <p class="texto-equipe"><strong>João Guilherme Pasinatto</strong><br><span style="font-size: 0.875rem;">Desenvolvedor</span></p>
+                <p class="texto-equipe"><strong>João Guilherme</strong><br><span style="font-size: 0.875rem;">Desenvolvedor</span></p>
             </div>
             <div>
                 <div class="team-photo"><img src="../assets/img/bremda.jpeg" alt=""></div>
@@ -137,7 +188,7 @@
             </div>
             <div>
                 <div class="team-photo"><img src="../assets/img/nigole.jpeg" alt=""></div>
-                <p class="texto-equipe"><strong>Maria Ferreira Silva</strong><br><span style="font-size: 0.875rem;">Produtora de Conteúdo</span></p>
+                <p class="texto-equipe"><strong>Maria Nicolle</strong><br><span style="font-size: 0.875rem;">Produtora de Conteúdo</span></p>
             </div>
             <div>
                 <div class="team-photo"><img src="../assets/img/basseggio.jpeg" alt=""></div>
@@ -152,19 +203,8 @@
         <p>© 2025 TrustV. Todos os direitos reservados.</p>
     </footer>
 
-    <button id="btnTop" style="
-    position: fixed;
-    bottom: 50%;
-    font-size: 2rem;
-    border-radius: 30%;
-    background-color: #30445c;
-    color: white;
-    border: none;
-    display: none;
-    cursor: pointer;
-    z-index: 1001;
-    transform: translate(50%);
-    padding: 1rem
-    ">↑</button>
+    <button id="btnTop" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
