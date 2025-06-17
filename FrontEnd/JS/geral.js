@@ -34,7 +34,14 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Máquina de escrever
-const frases = ["Confiança e velocidade x5", "Tecnologia com propósito", "Transformando ideias em soluções"];
+const frases = [
+    "Confiança e velocidade x5",
+    "Tecnologia com propósito",
+    "Transformando ideias em soluções",
+    "Inovação que transforma negócios",
+    "Soluções digitais que fazem a diferença",
+    "Tecnologia que conecta pessoas"
+];
 let i = 0, j = 0;
 let currentFrase = '';
 let isDeleting = false;
