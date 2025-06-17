@@ -1,20 +1,10 @@
-# 🚀 TrustV - Tecnologia com Confiança
+# 🚀 TrustV - Confiança e Velocidade x5
 
 ![TrustV Logo](FrontEnd/assets/img/logo.png)
 
 ## 📋 Sobre o Projeto
 
 A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósito de descomplicar o digital. Nosso site institucional foi desenvolvido para apresentar nossa empresa, valores e serviços de forma moderna e profissional.
-
-## ✨ Características
-
-- Design moderno e responsivo
-- Animações suaves e interativas
-- Seções informativas sobre a empresa
-- Apresentação dos segmentos de atuação
-- Equipe de profissionais
-- Informações de contato
-- Interface intuitiva e amigável
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -26,12 +16,6 @@ A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósi
 ### Bibliotecas e Recursos
 <a href="https://fontawesome.com/"><img src="https://img.shields.io/badge/Font_Awesome-%23339AF0?style=for-the-badge&logo=fontawesome&logoColor=white" alt="Font Awesome"></a>
 <a href="https://fonts.google.com/"><img src="https://img.shields.io/badge/Google_Fonts-%234285F4?style=for-the-badge&logo=google&logoColor=white" alt="Google Fonts"></a>
-
-### Recursos CSS Utilizados
-<img src="https://img.shields.io/badge/Flexbox-%23F7DF1E?style=for-the-badge&logo=css3&logoColor=black" alt="Flexbox">
-<img src="https://img.shields.io/badge/Grid_Layout-%23F7DF1E?style=for-the-badge&logo=css3&logoColor=black" alt="Grid Layout">
-<img src="https://img.shields.io/badge/CSS_Animations-%23F7DF1E?style=for-the-badge&logo=css3&logoColor=black" alt="CSS Animations">
-<img src="https://img.shields.io/badge/Media_Queries-%23F7DF1E?style=for-the-badge&logo=css3&logoColor=black" alt="Media Queries">
 
 ### Recursos JavaScript Utilizados
 <img src="https://img.shields.io/badge/ES6+-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="ES6+">
@@ -57,7 +41,7 @@ FrontEnd/
 
 1. Clone o repositório:
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
+git clone https://github.com/pedro-zucchi90/TrustV.git
 ```
 
 2. Navegue até o diretório do projeto:
@@ -73,15 +57,6 @@ O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 - Desktop
 - Tablet
 - Mobile
-
-## 🎯 Funcionalidades
-
-- Navegação suave entre seções
-- Animações de contadores
-- Efeito de digitação no hero
-- Cards interativos com flip effect
-- Botão de voltar ao topo
-- Links de contato funcionais
 
 ## 👥 Equipe de Desenvolvimento
 
@@ -100,7 +75,3 @@ Este projeto está sob a licença [MIT](LICENSE).
 - Email: trustvcontact@gmail.com
 - Telefone: (47) 99999-9999
 - Endereço: SC-283, Fragosos, Concórdia - SC, 89703-720
-
----
-
-Desenvolvido com ❤️ pela equipe TrustV
