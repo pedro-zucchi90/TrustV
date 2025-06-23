@@ -109,7 +109,7 @@ header {
 #hero {
     background: linear-gradient(to left, #182b43, #558fc7, #8b6fc1, #cdcfcf, #8b6fc1, #558fc7, #30445c, #182b43);
     background-size: 300% 100%;
-    animation: gradientBackground 6s infinite alternate-reverse;
+    animation: gradientBackground 4s infinite alternate-reverse;
     min-height: 60vh;
     display: flex;
     align-items: center;
