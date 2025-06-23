@@ -38,7 +38,7 @@ const frases = [
     "Confiança e velocidade x5",
     "Tecnologia com propósito",
     "Transformando ideias em soluções",
-    "Inovação que transforma negócios",
+    "Inovação que transforma seu negócio",
     "Soluções digitais que fazem a diferença",
     "Tecnologia que conecta pessoas"
 ];
