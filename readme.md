@@ -26,15 +26,38 @@ A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósi
 ## Estrutura do Projeto
 
 ```
-FrontEnd/
-├── assets/
-│   └── img/
-├── css/
-│   └── pagInicial.css
-├── JS/
-│   └── geral.js
-└── Html/
-    └── pagInicial.html
+TrustV/
+├── backend/
+│   ├── forms.py
+│   ├── instance/
+│   │   └── database.db
+│   ├── main.py
+│   └── models.py
+├── FrontEnd/
+│   ├── static/
+│   │   ├── geral.js
+│   │   ├── pagInicial.css
+│   │   ├── img/
+│   │   │   ├── basseggio.jpeg
+│   │   │   ├── bremda.jpeg
+│   │   │   ├── guapo.jpeg
+│   │   │   ├── harold.jpeg
+│   │   │   ├── hero-bg.jpg
+│   │   │   ├── lindo.jpeg
+│   │   │   ├── logo.png
+│   │   │   └── nigole.jpeg
+│   │   └── profile_pics/
+│   │       ├── james_sunderland.jpeg
+│   │       ├── lovely_son.jpeg
+│   │       └── Monster___Johan_Liebert_5___.jpeg
+│   └── templates/
+│       ├── base.html
+│       ├── edit_user.html
+│       ├── index.html
+│       ├── login.html
+│       ├── register.html
+│       └── users.html
+├── readme.md
 ```
 
 ## Como Executar
