@@ -1,6 +1,6 @@
 # TrustV - Confiança e Velocidade x5
 
-![TrustV Logo](FrontEnd/assets/img/logo.png)
+![TrustV Logo](FrontEnd/static/img/logo.png)
 
 ## Sobre o Projeto
 
