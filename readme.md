@@ -4,9 +4,17 @@
 
 ## Sobre o Projeto
 
-A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósito de descomplicar o digital. Nosso site institucional foi desenvolvido para apresentar nossa empresa, valores e serviços de forma moderna e profissional.
+A TrustV é uma aplicação web completa, composta por um backend em Flask e um frontend moderno. O sistema permite o cadastro, autenticação, edição e remoção de usuários, além de upload de foto de perfil. O objetivo é apresentar a empresa, seus valores e serviços, além de demonstrar funcionalidades de autenticação e gerenciamento de usuários.
 
 ## Tecnologias Utilizadas
+
+### Backend
+- [Flask](https://flask.palletsprojects.com/)
+- [Flask-Login](https://flask-login.readthedocs.io/)
+- [Flask-WTF](https://flask-wtf.readthedocs.io/)
+- [Flask-Bcrypt](https://flask-bcrypt.readthedocs.io/)
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ### Frontend
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"><img src="https://img.shields.io/badge/HTML5-%23E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"></a>
@@ -22,6 +30,15 @@ A TrustV é uma empresa de desenvolvimento de software que nasceu com o propósi
 <img src="https://img.shields.io/badge/DOM_Manipulation-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="DOM Manipulation">
 <img src="https://img.shields.io/badge/Event_Listeners-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Event Listeners">
 <img src="https://img.shields.io/badge/Intersection_Observer-%23F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Intersection Observer">
+
+## Funcionalidades
+
+- Cadastro de usuários com validação de dados e senha criptografada
+- Login e logout seguro
+- Edição de perfil (nome, email, data de nascimento e foto de perfil)
+- Upload de foto de perfil
+- Exclusão de usuários
+- Listagem de usuários autenticados
 
 ## Estrutura do Projeto
 
@@ -72,7 +89,20 @@ git clone https://github.com/pedro-zucchi90/TrustV.git
 cd TrustV
 ```
 
-3. Abra o arquivo `FrontEnd/Html/pagInicial.html` em seu navegador preferido.
+3. Instale as dependências do backend (recomenda-se uso de ambiente virtual):
+```bash
+pip install flask flask_sqlalchemy flask_bcrypt flask_login flask_wtf
+```
+
+4. Execute a aplicação Flask:
+```bash
+python backend/main.py
+```
+
+5. Acesse o sistema pelo navegador em:
+```
+http://localhost:5000
+```
 
 ## Responsividade
 
