@@ -25,11 +25,15 @@ btnTop.addEventListener('click', () => {
 // Scroll suave nos links
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
+        const href = this.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
+            }
         }
+        // Se não começa com #, deixa o link funcionar normalmente!
     });
 });
 
@@ -174,4 +178,71 @@ window.addEventListener('DOMContentLoaded', () => {
         icon.style.display = 'inline-block';
       });
   });
+  
+// Função para esconder flash messages após 3,5s
+function hideFlashMessages() {
+    const flashes = document.querySelectorAll('.flash-messages .alert');
+    flashes.forEach(flash => {
+        if (!flash.classList.contains('flash-timed')) {
+            flash.classList.add('flash-timed');
+            setTimeout(() => {
+                flash.style.opacity = '0';
+                flash.style.transition = 'opacity 0.7s';
+                setTimeout(() => {
+                    if (flash.parentNode) flash.parentNode.removeChild(flash);
+                }, 800);
+            }, 3500);
+        }
+    });
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+    hideFlashMessages();
+    // Observa se novas flash messages são adicionadas dinamicamente
+    const flashContainer = document.querySelector('.flash-messages');
+    if (flashContainer && window.MutationObserver) {
+        const observer = new MutationObserver(hideFlashMessages);
+        observer.observe(flashContainer, { childList: true });
+    }
+});
+
+// Confirmação de logout com SweetAlert2
+window.addEventListener('DOMContentLoaded', () => {
+    const logoutBtn = document.querySelector('.btn-logout');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            if (typeof Swal !== 'undefined') {
+                Swal.fire({
+                    title: 'Tem certeza que deseja sair?',
+                    text: 'Você será desconectado da sua conta.',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#c0392b',
+                    cancelButtonColor: '#8b6fc1',
+                    confirmButtonText: 'Sim, sair',
+                    cancelButtonText: 'Cancelar',
+                    background: '#fff',
+                    color: '#30445c',
+                    customClass: {
+                        popup: 'swal2-trustv-popup',
+                        title: 'swal2-trustv-title',
+                        confirmButton: 'swal2-trustv-confirm',
+                        cancelButton: 'swal2-trustv-cancel',
+                        actions: 'swal2-trustv-actions',
+                    },
+                    buttonsStyling: false,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = logoutBtn.getAttribute('href');
+                    }
+                });
+            } else {
+                if (confirm('Tem certeza que deseja sair da sua conta?')) {
+                    window.location.href = logoutBtn.getAttribute('href');
+                }
+            }
+        });
+    }
+});
   

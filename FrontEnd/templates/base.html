@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}TrustV | Tecnologia e Confiança{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pagInicial.css') }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/07d2432083.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='geral.js') }}" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="logo"></a>
+                {% if request.endpoint in ['index'] %}
+                <ul class="nav-links navbar-nav-main">
+                    <li><a href="#sobre">Sobre nós</a></li>
+                    <li><a href="#segmentos">Segmentos</a></li>
+                    <li><a href="#contato">Contate-nos</a></li>
+                    <li><a href="#equipe">Equipe</a></li>
+                </ul>
+                {% endif %}
+                <ul class="nav-links navbar-nav-auth">
+                    {% if current_user.is_authenticated %}
+                        <li>
+                            <a href="{{ url_for('users') }}" class="profile-pic-link">
+                                {% if current_user.profile_pic %}
+                                    <img src="{{ url_for('static', filename=current_user.profile_pic) }}" class="profile-pic-navbar" alt="Perfil">
+                                {% else %}
+                                    <span class="profile-pic-placeholder"><i class="fas fa-user-circle"></i></span>
+                                {% endif %}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('logout') }}" class="btn-auth btn-logout">Sair</a>
+                        </li>
+                    {% else %}
+                        <li><a href="{{ url_for('login') }}" class="btn-auth">Entrar</a></li>
+                        <li><a href="{{ url_for('register') }}" class="btn-auth">Cadastrar</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </header>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-messages">
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+    <footer>
+        <p>TrustV • Tecnologia com Confiança</p>
+        <p>© 2025 TrustV. Todos os direitos reservados.</p>
+    </footer>
+    <button id="btnTop" title="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html> 
