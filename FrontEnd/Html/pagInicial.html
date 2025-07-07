@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TrustV | Tecnologia e Confiança</title>
     <link rel="stylesheet" href="../css/pagInicial.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="https://kit.fontawesome.com/07d2432083.js" crossorigin="anonymous"></script>
-    <script src="../JS/geral.js" defer></script>      
+    <script src="../JS/geral.js" defer></script>
 </head>
 
 <body>
@@ -30,11 +31,21 @@
         </nav>
     </header>
 
+    
+
     <section id="hero">
         <div class="container-hero">
             <h1 class="titulo-hero"><span id="typing"></span></h1>
         </div>
     </section>
+
+    <!-- Widget de Previsão do Tempo -->
+    <div id="weather-widget">
+        <span class="weather-city">Concórdia - SC</span>
+        <i class="weather-icon wi"></i>
+        <span class="weather-desc">Carregando previsão...</span>
+        <span class="weather-temp"></span>
+    </div>
 
     <section id="sobre">
         <div class="container-sobre">
@@ -241,13 +252,15 @@
                 <p class="texto-equipe"><strong>Maria Nicolle</strong><br><span style="font-size: 0.875rem;">Content creator</span></p>
             </div>
             <div>
+                <div class="team-photo"><img src="../assets/img/harold.jpeg" alt=""></div>
+                <p class="texto-equipe"><strong>Haroldo Fernandes</strong><br><span style="font-size: 0.875rem;">Content Creator</span></p>
+            </div>
+            <div>
                 <div class="team-photo"><img src="../assets/img/basseggio.jpeg" alt=""></div>
                 <p class="texto-equipe"><strong>João Basseggio</strong><br><span style="font-size: 0.875rem;">Designer</span></p>
             </div>
         </div>
     </section>
-
-
 
     <!-- Rodapé -->
     <footer>

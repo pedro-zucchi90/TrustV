@@ -64,6 +64,7 @@ O site é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 - João Guilherme - Desenvolvedor
 - Brenda Goronski - Content Creator
 - Maria Nicolle - Content Creator
+- Haroldo Fernandes - Content Creator
 - João Basseggio - Designer
 
 ## Licença

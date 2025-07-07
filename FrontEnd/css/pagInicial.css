@@ -9,12 +9,13 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #e3e3e3;
     color: #30445c;
-
+    padding-top: 8rem; /* ajuste conforme altura do header */
 }
 
 section {
     margin: 0 auto;
     position: relative;
+    margin-bottom: 4rem;
 }
 
 hr {
@@ -28,11 +29,15 @@ hr {
 
 /* ===== HEADER E NAVEGAÇÃO ===== */
 header {
-    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    background: rgba(255, 255, 255, 0.637); /* opacidade aumentada de 0.85 para 0.97 */
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
     z-index: 1000;
-    margin-top: 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
 }
 
 .navbar {
@@ -115,6 +120,10 @@ header {
     align-items: center;
     justify-content: center;
     position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #hero::before {
@@ -145,6 +154,8 @@ header {
     color: #E4F0F0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1s ease-out;
+    letter-spacing: 1.5px;
+    line-height: 1.1;
 }
 
 /* ===== SOBRE NÓS SECTION ===== */
@@ -177,6 +188,7 @@ header {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 1s ease-out;
 }
 
 .texto-sobre:hover {
@@ -196,6 +208,7 @@ header {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
     transform: translateY(0);
     transition: transform 0.3s ease;
+    animation: fadeInUp 1s ease-out;
 }
 
 .estatisticas-container:hover {
@@ -255,6 +268,7 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
     margin-top: 1.5rem;
+    animation: fadeInUp 1s ease-out;
 }
 
 .valor-card {
@@ -320,6 +334,13 @@ header {
     width: 30rem;
     min-width: 30rem;
     margin: 0.5rem;
+    box-shadow: 0 8px 32px rgba(85,143,199,0.10);
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card-flip:hover {
+    box-shadow: 0 16px 48px rgba(85,143,199,0.18);
+    transform: translateY(-8px) scale(1.03);
 }
 
 .card-inner {
@@ -514,6 +535,8 @@ footer p {
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
+    letter-spacing: 1.5px;
+    line-height: 1.1;
 }
 
 .titulo-secao::after {
@@ -861,3 +884,91 @@ footer p {
         gap: 1.5rem;
     }
 }
+
+/* ===== WIDGET DE PREVISÃO DO TEMPO ===== */
+#weather-widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(85, 143, 199, 0.10);
+    border-radius: 18px;
+    padding: 1.5rem 2rem 1.2rem 2rem;
+    max-width: 340px;
+    margin: 2.5rem auto 0 auto;
+    position: relative;
+    z-index: 10;
+    font-family: 'Roboto', sans-serif;
+    border: 1.5px solid #8b6fc1;
+    transition: box-shadow 0.3s, background 0.5s;
+}
+
+.weather-city {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #8b6fc1;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.1rem;
+    opacity: 0.85;
+}
+
+.weather-icon {
+    font-size: 3.5rem;
+    color: #558fc7;
+    margin: 0.3rem 0 0.1rem 0;
+    filter: drop-shadow(0 2px 6px rgba(85,143,199,0.10));
+    background: none;
+    display: block;
+}
+
+.weather-temp {
+    font-size: 2.2rem;
+    color: #8b6fc1;
+    font-weight: bold;
+    margin: 0.1rem 0 0.2rem 0;
+    text-shadow: 1px 1px 2px rgba(200,200,200,0.10);
+    letter-spacing: 1px;
+}
+
+.weather-desc {
+    font-size: 1.05rem;
+    color: #30445c;
+    font-weight: 400;
+    margin: 0.1rem 0 0 0;
+    text-align: center;
+    opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+    #weather-widget {
+        padding: 1rem 0.5rem 0.8rem 0.5rem;
+        max-width: 98vw;
+    }
+    .weather-icon {
+        font-size: 2.2rem;
+    }
+    .weather-city {
+        font-size: 0.95rem;
+    }
+    .weather-temp {
+        font-size: 1.3rem;
+    }
+    .weather-desc {
+        font-size: 0.95rem;
+    }
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
